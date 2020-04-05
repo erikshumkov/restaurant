@@ -1,0 +1,319 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth; }
+
+body {
+  overflow-x: hidden; }
+
+:root {
+  --body-bg: #181717;
+  --text: #dfbc82;
+  --underline: #b37849;
+  --head-font: 'Source Serif Pro', serif;
+  --text-font: 'Open Sans', sans-serif;
+  --wrapper-width: 1150px;
+  --wrapper-margin: auto; }
+
+header {
+  position: relative;
+  background: url("../img/beef.jpg") no-repeat center center;
+  background-size: cover;
+  font-family: var(--text-font);
+  height: 100vh;
+  width: 100%;
+  box-shadow: inset 0px 170px 100px 5px rgba(0, 0, 0, 0.8);
+  padding: 10px 0 10px; }
+  header .wrapper {
+    max-width: 1150px;
+    margin: auto; }
+    header .wrapper .nav {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
+      background: rgba(0, 0, 0, 0);
+      width: 100%;
+      height: 75px; }
+      header .wrapper .nav .logo-link {
+        letter-spacing: 1.5px;
+        text-decoration: none;
+        color: var(--text);
+        font-size: 2rem;
+        font-family: var(--text-font);
+        text-transform: capitalize;
+        font-weight: 700; }
+      header .wrapper .nav .ul-nav {
+        margin-right: 30px; }
+        header .wrapper .nav .ul-nav li {
+          display: inline-block;
+          text-transform: capitalize;
+          font-weight: 400;
+          font-size: 1.1rem; }
+          header .wrapper .nav .ul-nav li a {
+            margin: 0 10px;
+            padding: 15px 3px 5px;
+            color: #fff;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: 0.3s color ease; }
+            header .wrapper .nav .ul-nav li a:hover {
+              color: rgba(255, 255, 255, 0.8);
+              border-bottom: 2px solid var(--underline); }
+    header .wrapper .jumbo {
+      margin-top: 150px; }
+      header .wrapper .jumbo h1 {
+        color: #fff;
+        text-transform: capitalize;
+        font-size: 4.2rem;
+        font-family: var(--head-font);
+        font-weight: 600; }
+    header .wrapper .book {
+      margin-top: 60px; }
+      header .wrapper .book a {
+        color: #fff;
+        text-decoration: none;
+        text-transform: capitalize;
+        font-size: 1.3rem;
+        font-family: var(--head-font);
+        font-weight: 600;
+        border: 1px solid #fff;
+        padding: 12px 40px;
+        transition: 0.2s all ease; }
+        header .wrapper .book a:hover {
+          background: var(--underline);
+          border-color: var(--underline); }
+
+#menu {
+  background: #fff;
+  color: #000;
+  padding: 100px 0; }
+  #menu .wrapper {
+    max-width: 1600px;
+    margin: 0 auto;
+    position: relative; }
+  #menu .menu-header {
+    display: flex;
+    justify-content: center;
+    max-width: 90%; }
+    #menu .menu-header .discover {
+      text-align: center; }
+      #menu .menu-header .discover h2 {
+        font-size: 3.5rem;
+        margin-bottom: -18px;
+        font-family: var(--head-font); }
+    #menu .menu-header .text {
+      text-align: left;
+      width: 40%; }
+      #menu .menu-header .text p {
+        font-family: var(--text-font);
+        font-size: 1rem;
+        line-height: 1.6; }
+  #menu .menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; }
+    #menu .menu-grid .image {
+      margin-right: 110px;
+      height: 600px;
+      box-shadow: 10px 10px 23px -11px rgba(0, 0, 0, 0.6); }
+      #menu .menu-grid .image img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover; }
+    #menu .menu-grid .food-menu {
+      margin-top: 80px;
+      margin-left: 72px; }
+      #menu .menu-grid .food-menu .category {
+        margin-bottom: 3rem; }
+        #menu .menu-grid .food-menu .category h4 {
+          display: inline-block;
+          font-family: var(--text-font);
+          font-weight: 600;
+          font-size: 1.5rem;
+          padding-bottom: 3px;
+          border-bottom: 2px solid transparent;
+          cursor: pointer; }
+        #menu .menu-grid .food-menu .category h4:first-of-type {
+          margin-right: 5rem; }
+        #menu .menu-grid .food-menu .category h4.select {
+          border-bottom: 2px solid var(--text); }
+      #menu .menu-grid .food-menu .the-food {
+        font-family: var(--text-font); }
+        #menu .menu-grid .food-menu .the-food .item {
+          margin-bottom: 1.3rem; }
+    #menu .menu-grid .aside {
+      display: flex;
+      flex-direction: column;
+      margin: 80px 0 65px;
+      padding: 0 0 0 60px;
+      font-family: var(--text-font);
+      border-left: 2px solid #dfdfdf; }
+      #menu .menu-grid .aside .food p,
+      #menu .menu-grid .aside .drinks p {
+        font-size: 1.5rem;
+        font-weight: 300;
+        cursor: pointer; }
+      #menu .menu-grid .aside .food p.select,
+      #menu .menu-grid .aside .drinks p.select {
+        font-weight: 700; }
+      #menu .menu-grid .aside .food {
+        margin-bottom: 20px; }
+
+#testimonial {
+  padding: 100px 0;
+  font-family: var(--text-font);
+  background: var(--body-bg);
+  color: #fff; }
+  #testimonial .wrapper {
+    max-width: var(--wrapper-width);
+    margin: var(--wrapper-margin); }
+  #testimonial .testimonial-header {
+    text-align: center; }
+    #testimonial .testimonial-header h4 {
+      margin-bottom: 0;
+      text-transform: uppercase;
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--text); }
+    #testimonial .testimonial-header h2 {
+      font-size: 2.2rem;
+      text-transform: capitalize;
+      font-family: var(--head-font);
+      margin-bottom: 25px; }
+    #testimonial .testimonial-header p {
+      color: #bdbdbd;
+      width: 55%;
+      margin: 0 auto 40px;
+      line-height: 1.8; }
+  #testimonial .testimonial-body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 40px; }
+    #testimonial .testimonial-body .person1,
+    #testimonial .testimonial-body .person2 {
+      padding: 50px 50px;
+      border: 1px solid #dfbb8242; }
+      #testimonial .testimonial-body .person1 .quote-img,
+      #testimonial .testimonial-body .person2 .quote-img {
+        margin-bottom: 40px;
+        font-size: 1.8rem;
+        color: var(--text); }
+      #testimonial .testimonial-body .person1 .quote,
+      #testimonial .testimonial-body .person2 .quote {
+        line-height: 1.8;
+        font-style: italic;
+        color: #bbbab8;
+        margin-bottom: 40px; }
+      #testimonial .testimonial-body .person1 .name,
+      #testimonial .testimonial-body .person2 .name {
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        letter-spacing: 2.5px;
+        font-weight: 600; }
+  #testimonial .slide-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px; }
+    #testimonial .slide-btn .circle {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #dfbb8238;
+      cursor: pointer; }
+    #testimonial .slide-btn .circle:nth-last-of-type(2) {
+      margin: 0 20px; }
+    #testimonial .slide-btn .circle.selected {
+      background-color: var(--text); }
+
+#reservation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/book.jpg") no-repeat center center;
+  position: relative;
+  background-size: cover;
+  font-family: var(--head-font);
+  height: 70vh;
+  width: 100%;
+  padding: 10px 0 10px;
+  color: #fff; }
+  #reservation h2 {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    font-family: var(--text-font);
+    font-weight: 400; }
+  #reservation h1 {
+    margin-bottom: 70px;
+    font-size: 3.5rem;
+    font-weight: 800; }
+  #reservation a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 1rem;
+    font-family: var(--head-font);
+    font-weight: 600;
+    border: 1.5px solid #fff;
+    padding: 14px 60px;
+    transition: 0.2s all ease; }
+    #reservation a:hover {
+      background: #b37849;
+      border-color: #b37849; }
+
+footer {
+  background-color: #181717;
+  color: #fff;
+  padding: 120px 0 100px;
+  font-family: var(--text-font); }
+  footer .wrapper {
+    max-width: 1200px;
+    margin: 0 auto; }
+  footer .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center; }
+    footer .grid .location h4,
+    footer .grid .hours h4 {
+      margin-bottom: 25px;
+      color: var(--text);
+      font-weight: 400; }
+    footer .grid .location p,
+    footer .grid .hours p {
+      font-weight: 300; }
+    footer .grid .location .address {
+      display: flex; }
+      footer .grid .location .address .start {
+        margin-right: 15px; }
+    footer .grid .hours .opening {
+      display: flex; }
+      footer .grid .hours .opening .days {
+        margin-right: 50px; }
+    footer .grid .contact {
+      text-align: right; }
+      footer .grid .contact h2 {
+        margin-bottom: 40px; }
+        footer .grid .contact h2 a {
+          font-family: var(--text-font);
+          font-weight: 700;
+          font-size: 2rem;
+          letter-spacing: 1px;
+          color: var(--text);
+          text-decoration: none; }
+      footer .grid .contact .email {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 300; }
+
+@media (max-width: 600px) {
+  body {
+    overflow-x: scroll; } }
+
+/*# sourceMappingURL=style.css.map */

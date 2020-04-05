@@ -1,0 +1,42 @@
+#reservation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('../img/book.jpg') no-repeat center center;
+  position: relative;
+  background-size: cover;
+  font-family: var(--head-font);
+  height: 70vh;
+  width: 100%;
+  padding: 10px 0 10px;
+  color: #fff;
+  h2 {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    font-family: var(--text-font);
+    font-weight: 400;
+  }
+  h1 {
+    margin-bottom: 70px;
+    font-size: 3.5rem;
+    font-weight: 800;
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 1rem;
+    font-family: var(--head-font);
+    font-weight: 600;
+    border: 1.5px solid #fff;
+    padding: 14px 60px;
+    transition: 0.2s all ease;
+    &:hover {
+      background: #b37849;
+      border-color: #b37849;
+    }
+  }
+}
