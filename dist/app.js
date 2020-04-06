@@ -4,6 +4,7 @@ const person1 = document.querySelector(".person1");
 const person2 = document.querySelector(".person2");
 const slideBtn = document.querySelector(".slide-btn");
 const theMenu = document.querySelector(".menu-grid");
+const menuImg = theMenu.querySelector("img");
 const menuCategory = document.querySelector(".category");
 const food = document.querySelector(".the-food");
 let slide = 0;
@@ -66,11 +67,13 @@ theMenu.addEventListener("click", e => {
     if (e.target.innerText === "Lunch") {
       document.querySelector("p.select").className = "";
       document.querySelector(".food p").className = "select";
+      menuImg.setAttribute("src", "./img/main.jpg");
       generateMenuTxt(0);
     }
     if (e.target.innerText === "Dinner") {
       document.querySelector("p.select").className = "";
       document.querySelector(".food p").className = "select";
+      menuImg.setAttribute("src", "./img/main.jpg");
       generateMenuTxt(1);
     }
   }
@@ -79,12 +82,14 @@ theMenu.addEventListener("click", e => {
     e.target.classList.add("select");
     [...menuCategory.children].forEach(head => head.classList.remove("select"));
     menuCategory.children[0].classList.add("select");
+    menuImg.setAttribute("src", "./img/main.jpg");
     generateMenuTxt(0);
   }
   if (e.target.innerText === "Drinks and Wine") {
     [...menuCategory.children].forEach(head => head.classList.remove("select"));
     document.querySelector("p.select").className = "";
     e.target.classList.add("select");
+    menuImg.setAttribute("src", "./img/wine.jpg");
     generateMenuTxt(2);
   }
 });
