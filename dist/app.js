@@ -67,14 +67,36 @@ theMenu.addEventListener("click", e => {
     if (e.target.innerText === "Lunch") {
       document.querySelector("p.select").className = "";
       document.querySelector(".food p").className = "select";
-      menuImg.setAttribute("src", "./img/main.jpg");
-      generateMenuTxt(0);
+
+      if (menuImg.getAttribute("src").includes("wine")) {
+        menuImg.classList.add("fade");
+        setTimeout(() => {
+          menuImg.setAttribute("src", "./img/main.jpg");
+          generateMenuTxt(0);
+          menuImg.classList.add("fade2");
+        }, 500)
+        setTimeout(() => menuImg.className = "", 800);
+      } else {
+        menuImg.setAttribute("src", "./img/main.jpg");
+        generateMenuTxt(0);
+      }
     }
     if (e.target.innerText === "Dinner") {
       document.querySelector("p.select").className = "";
       document.querySelector(".food p").className = "select";
-      menuImg.setAttribute("src", "./img/main.jpg");
-      generateMenuTxt(1);
+
+      if (menuImg.getAttribute("src").includes("wine")) {
+        menuImg.classList.add("fade");
+        setTimeout(() => {
+          menuImg.setAttribute("src", "./img/main.jpg");
+          generateMenuTxt(1);
+          menuImg.classList.add("fade2");
+        }, 500)
+        setTimeout(() => menuImg.className = "", 800);
+      } else {
+        menuImg.setAttribute("src", "./img/main.jpg");
+        generateMenuTxt(1);
+      }
     }
   }
   if (e.target.innerText === "Food") {
@@ -82,15 +104,25 @@ theMenu.addEventListener("click", e => {
     e.target.classList.add("select");
     [...menuCategory.children].forEach(head => head.classList.remove("select"));
     menuCategory.children[0].classList.add("select");
-    menuImg.setAttribute("src", "./img/main.jpg");
-    generateMenuTxt(0);
+    menuImg.classList.add("fade");
+    setTimeout(() => {
+      menuImg.setAttribute("src", "./img/main.jpg");
+      generateMenuTxt(0);
+      menuImg.classList.add("fade2");
+    }, 500)
+    setTimeout(() => menuImg.className = "", 800);
   }
   if (e.target.innerText === "Drinks and Wine") {
     [...menuCategory.children].forEach(head => head.classList.remove("select"));
     document.querySelector("p.select").className = "";
     e.target.classList.add("select");
-    menuImg.setAttribute("src", "./img/wine.jpg");
-    generateMenuTxt(2);
+    menuImg.classList.add("fade");
+    setTimeout(() => {
+      menuImg.setAttribute("src", "./img/wine.jpg");
+      generateMenuTxt(2);
+      menuImg.classList.add("fade2");
+    }, 500)
+    setTimeout(() => menuImg.className = "", 800);
   }
 });
 

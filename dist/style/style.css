@@ -165,6 +165,22 @@ header {
       #menu .menu-grid .aside .food {
         margin-bottom: 20px; }
 
+img.fade {
+  animation: fade 0.5s forwards; }
+
+img.fade2 {
+  animation: fade2 0.5s forwards; }
+
+@keyframes fade {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@keyframes fade2 {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 #testimonial {
   padding: 100px 0;
   font-family: var(--text-font);
