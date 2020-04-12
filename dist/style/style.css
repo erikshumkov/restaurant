@@ -120,13 +120,14 @@ header {
     grid-template-columns: 1fr 1fr 1fr; }
     #menu .menu-grid .image {
       margin-right: 110px;
-      height: 600px;
-      box-shadow: 10px 10px 23px -11px rgba(0, 0, 0, 0.6); }
+      height: 600px; }
       #menu .menu-grid .image img {
         height: 100%;
         width: 100%;
         object-fit: cover; }
     #menu .menu-grid .food-menu {
+      position: relative;
+      overflow: hidden;
       margin-top: 80px;
       margin-left: 72px; }
       #menu .menu-grid .food-menu .category {
@@ -181,6 +182,14 @@ img.fade2 {
     opacity: 0; }
   100% {
     opacity: 1; } }
+.hide {
+  position: absolute;
+  top: 10%;
+  height: 100%;
+  width: 100%;
+  transform: translateX(440px);
+  background: white; }
+
 #testimonial {
   padding: 100px 0;
   font-family: var(--text-font);

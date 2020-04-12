@@ -35,7 +35,7 @@
     .image {
       margin-right: 110px;
       height: 600px;
-      box-shadow: 10px 10px 23px -11px rgba(0, 0, 0, 0.6);
+      // box-shadow: 10px 10px 23px -11px rgba(0, 0, 0, 0.6);
       img {
         height: 100%;
         width: 100%;
@@ -43,6 +43,8 @@
       }
     }
     .food-menu {
+      position: relative;
+      overflow: hidden;
       margin-top: 80px;
       margin-left: 72px;
       .category {
@@ -119,4 +121,13 @@ img.fade2 {
   100% {
     opacity: 1;
   }
+}
+
+.hide {
+  position: absolute;
+  top: 10%;
+  height: 100%;
+  width: 100%;
+  transform: translateX(440px);
+  background: white;
 }
