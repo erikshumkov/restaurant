@@ -69,14 +69,14 @@ header {
     header .wrapper .jumbo {
       margin-top: 150px; }
       header .wrapper .jumbo h1 {
-        visibility: visible;
+        visibility: hidden;
         color: #fff;
         text-transform: capitalize;
         font-size: 4.2rem;
         font-family: var(--head-font);
         font-weight: 600; }
     header .wrapper .book {
-      visibility: visible;
+      visibility: hidden;
       margin-top: 60px; }
       header .wrapper .book a {
         color: #fff;
