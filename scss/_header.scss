@@ -54,6 +54,7 @@ header {
     .jumbo {
       margin-top: 150px;
       h1 {
+        visibility: visible;
         color: #fff;
         text-transform: capitalize;
         font-size: 4.2rem;
@@ -63,6 +64,7 @@ header {
     }
 
     .book {
+      visibility: visible;
       margin-top: 60px;
       a {
         color: #fff;
