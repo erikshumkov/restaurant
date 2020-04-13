@@ -35,9 +35,7 @@ generateMenuTxt(0);
 setTestimonialTxt(slide);
 
 // GSAP animation on the header
-var tl = gsap.timeline();
-tl.from(".jumbo h1", { opacity: 0, duration: .8, y: -70 }, "+=.5");
-tl.from(".book", { opacity: 0, duration: .8, y: -90 }, "-=.4");
+gsap.from(".animation", { opacity: 0, duration: .8, delay: .4, y: -70, stagger: 0.6 });
 
 // Animation on the menu component
 function imageAnimation(src) {
