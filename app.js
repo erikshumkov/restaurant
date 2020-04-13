@@ -35,6 +35,8 @@ generateMenuTxt(0);
 setTestimonialTxt(slide);
 
 // GSAP animation on the header
+document.querySelector(".animation").style.visibility = "visible";
+document.querySelectorAll(".animation")[1].style.visibility = "visible";
 gsap.from(".animation", { opacity: 0, duration: .8, delay: .4, y: -70, stagger: 0.6 });
 
 // Animation on the menu component
