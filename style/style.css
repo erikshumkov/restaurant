@@ -184,14 +184,6 @@ img.fade2 {
     opacity: 0; }
   100% {
     opacity: 1; } }
-.hide {
-  position: absolute;
-  top: 10%;
-  height: 100%;
-  width: 100%;
-  transform: translateX(440px);
-  background: white; }
-
 #testimonial {
   padding: 100px 0;
   font-family: var(--text-font);

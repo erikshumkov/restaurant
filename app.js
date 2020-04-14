@@ -39,7 +39,7 @@ document.querySelector(".animation").style.visibility = "visible";
 document.querySelectorAll(".animation")[1].style.visibility = "visible";
 gsap.from(".animation", { opacity: 0, duration: .8, delay: .4, y: -70, stagger: 0.6 });
 
-// Animation on the menu component
+// Animation on the menu component, the image
 function imageAnimation(src) {
   gsap.to(menuImg, {
     opacity: 0, x: -60, duration: .5, onComplete: () => {
@@ -47,6 +47,15 @@ function imageAnimation(src) {
     }
   });
   gsap.to(menuImg, { opacity: 1, x: 0, delay: .6, duration: .7 });
+}
+
+// Animation on the menu component, the text
+function menuTextAnimation(number) {
+  gsap.to(".the-food", { opacity: 0, y: -15, duration: .3 });
+  gsap.to(".the-food", { y: 80, delay: .4 });
+  gsap.to(".the-food", { opacity: 1, y: 0, duration: 1, delay: .5 });
+
+  setTimeout(() => generateMenuTxt(number), 500);
 }
 
 // Animation on testimonial component
@@ -93,48 +102,45 @@ theMenu.addEventListener("click", e => {
       document.querySelector("p.select").className = "";
       document.querySelector(".food p").className = "select";
 
-      // gsap.to(".hide", { x: 0, duration: 1 });
-      // gsap.to(".hide", { x: 440, duration: 1, delay: 1.1 });
-
       if (menuImg.src.includes("dinner")) {
-        generateMenuTxt(0);
+        // Animate text
+        menuTextAnimation(0);
 
         // Animate image
         imageAnimation("main");
       }
 
       if (menuImg.src.includes("wine")) {
-        generateMenuTxt(0);
+        // Animate text
+        menuTextAnimation(0);
 
         // Animate image
         imageAnimation("main");
       } else {
-        // setTimeout(() => generateMenuTxt(0), 1100);
-        generateMenuTxt(0);
+        setTimeout(() => generateMenuTxt(0), 500);
       }
     }
     if (e.target.innerText === "Dinner") {
       document.querySelector("p.select").className = "";
       document.querySelector(".food p").className = "select";
 
-      // gsap.to(".hide", { x: 0, duration: 1 });
-      // gsap.to(".hide", { x: 440, duration: 1, delay: 1.1 });
       if (menuImg.src.includes("main")) {
-        generateMenuTxt(1);
+        // Animate text
+        menuTextAnimation(1);
 
         // Animate image
         imageAnimation("dinner");
       }
 
       if (menuImg.src.includes("wine")) {
-        generateMenuTxt(1);
+        // Animate text
+        menuTextAnimation(1);
 
         // Animate image
         imageAnimation("dinner");
 
       } else {
-        // setTimeout(() => generateMenuTxt(1), 1100);
-        generateMenuTxt(1);
+        setTimeout(() => generateMenuTxt(1), 500);
       }
     }
   }
@@ -143,7 +149,9 @@ theMenu.addEventListener("click", e => {
     e.target.classList.add("select");
     [...menuCategory.children].forEach(head => head.classList.remove("select"));
     menuCategory.children[0].classList.add("select");
-    generateMenuTxt(0);
+
+    // Animate text
+    menuTextAnimation(0);
 
     // Animate image
     imageAnimation("main");
@@ -152,7 +160,9 @@ theMenu.addEventListener("click", e => {
     [...menuCategory.children].forEach(head => head.classList.remove("select"));
     document.querySelector("p.select").className = "";
     e.target.classList.add("select");
-    generateMenuTxt(2);
+
+    // Animate text
+    menuTextAnimation(2);
 
     // Animate image
     imageAnimation("wine");
