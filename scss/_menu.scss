@@ -123,11 +123,13 @@ img.fade2 {
   }
 }
 
-.hide {
-  position: absolute;
-  top: 10%;
-  height: 100%;
-  width: 100%;
-  transform: translateX(440px);
-  background: white;
-}
+// .item p:after {
+//   content: ' ';
+//   position: absolute;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   z-index: 1;
+//   transform-origin: 100% 0;
+//   background: white;
+// }
