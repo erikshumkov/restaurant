@@ -1,5 +1,16 @@
 import { slideContent, menuContent } from "./dummyText.js";
 
+const imgArr = ["./img/main.jpg", "./img/dinner.jpg", "./img/wine.jpg"];
+
+for (let i = 0; i < imgArr.length; i++) {
+  preloadImage(imgArr[i]);
+}
+
+function preloadImage(src) {
+  const img = new Image();
+  img.src = src;
+}
+
 const person1 = document.querySelector(".person1");
 const person2 = document.querySelector(".person2");
 const slideBtn = document.querySelector(".slide-btn");
@@ -41,21 +52,25 @@ gsap.from(".animation", { opacity: 0, duration: .8, delay: .4, y: -70, stagger: 
 
 // Animation on the menu component, the image
 function imageAnimation(src) {
-  gsap.to(menuImg, {
+  const tl = gsap.timeline();
+  tl.to(menuImg, {
     opacity: 0, x: -60, duration: .5, onComplete: () => {
       menuImg.src = `./img/${src}.jpg`;
     }
-  });
-  gsap.to(menuImg, { opacity: 1, x: 0, delay: .6, duration: .7 });
+  })
+    .to(menuImg, { opacity: 1, x: 0, delay: .2, duration: .7 });
 }
 
 // Animation on the menu component, the text
 function menuTextAnimation(number) {
-  gsap.to(".the-food", { opacity: 0, y: -15, duration: .3 });
-  gsap.to(".the-food", { y: 80, delay: .4 });
-  gsap.to(".the-food", { opacity: 1, y: 0, duration: 1, delay: .5 });
+  const tl = gsap.timeline();
+  tl.to(".the-food", { opacity: 0, y: -15, duration: .3 })
+    .to(".the-food", { y: 20 })
+    .to(".the-food", { opacity: 1, y: 0, duration: .7 });
 
   setTimeout(() => generateMenuTxt(number), 500);
+
+  return tl;
 }
 
 // Animation on testimonial component
@@ -193,3 +208,9 @@ theMenu.addEventListener("click", e => {
 //     slide = 0;
 //   }
 // }, 4000);
+
+// if (tl.isActive()) {
+//   e.preventDefault();
+//   e.stopImmediatePropagation();
+//   return false;
+// }
