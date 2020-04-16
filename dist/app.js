@@ -1,11 +1,14 @@
 import { slideContent, menuContent } from "./dummyText.js";
 
+// Source to the images
 const imgArr = ["./img/main.jpg", "./img/dinner.jpg", "./img/wine.jpg"];
 
+// Add image source to preload function
 for (let i = 0; i < imgArr.length; i++) {
   preloadImage(imgArr[i]);
 }
 
+// Preload images
 function preloadImage(src) {
   const img = new Image();
   img.src = src;
@@ -54,11 +57,11 @@ gsap.from(".animation", { opacity: 0, duration: .8, delay: .4, y: -70, stagger: 
 function imageAnimation(src) {
   const tl = gsap.timeline();
   tl.to(menuImg, {
-    opacity: 0, x: -60, duration: .5, onComplete: () => {
+    opacity: 0, scale: 0.8, x: -120, duration: .5, onComplete: () => {
       menuImg.src = `./img/${src}.jpg`;
     }
   })
-    .to(menuImg, { opacity: 1, x: 0, delay: .2, duration: .7 });
+    .to(menuImg, { opacity: 1, scale: 1, x: 0, delay: .2, duration: .7 });
 }
 
 // Animation on the menu component, the text
